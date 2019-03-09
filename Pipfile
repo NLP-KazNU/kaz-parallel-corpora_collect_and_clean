@@ -14,6 +14,7 @@ twisted = "*"
 cryptography = "*"
 pyopenssl = "*"
 scrapy = "*"
+docopt = "*"
 
 [requires]
 python_version = "3.6"
