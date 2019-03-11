@@ -2,12 +2,12 @@
 
 ## Заметки
 
-Переменная необходима, чтобы кодировка json-файла была utf-8
+Variable needed for json-encoding to be utf-8
 ```shell
 FEED_EXPORT_ENCODING='utf-8'
 ```
 
-"Стандартный" способ запускать краулинга. Используется, когда есть проект краулинга.
+"Сonventional" way to run crawling. Used when there is a crawling project.
 ```shell
 scrapy crawl quotes -o quotes.json
 ```
