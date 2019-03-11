@@ -14,7 +14,7 @@ scrapy crawl quotes -o quotes.json
 
 Способ запускать краулинг, имея файла с описанием "паука", без создания проекта краулинга.
 ```shell
-scrapy runspider <spider_file.py>
+scrapy runspider <spider_file.py> -o <output.json>
 ```
 
 ```shell
