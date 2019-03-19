@@ -40,19 +40,6 @@ Options:
     -h --help       Show this screen.
 """
 
-# ./join_similar_urls.py  --input1 xml1.xml --input2 xml2.xml -s
-# {'--help': False,
-#  '--input1': True,
-#  '--input2': True,
-#  '--multiple': False,
-#  '--output': False,
-#  '--single': True,
-#  '--version': False,
-#  '<xml_file_1>': 'xml1.xml',
-#  '<xml_file_2>': 'xml2.xml',
-#  '<output_file>': None}
-
-
 from docopt import docopt
 import xml.etree.ElementTree as ET
 import re
@@ -81,6 +68,9 @@ def is_similar_urls(url_1: str, url_2: str) -> bool:
 def save_items_into_nth_file(
     file_number: int, xml_piece_1: ET.Element, xml_piece_2: ET.Element, file_name: str
 ) -> None:
+    """
+    Saves privided pieces of xml into a new (nubered) file as a pair.
+    """
     # combine a pair of xml pieces provided
     root = ET.Element("pair")
     root.append(xml_piece_1)
