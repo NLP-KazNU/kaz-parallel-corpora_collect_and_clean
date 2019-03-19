@@ -45,7 +45,10 @@ def gen_list_and_file(
     """
     with open(file_name, "w") as urls_file:
         for url in url_list:
-            print(url.replace(change_from, change_to), file=urls_file)
+            print(
+                url.replace("/" + change_from + "/", "/" + change_to + "/"),
+                file=urls_file,
+            )
 
 
 def main():
