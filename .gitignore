@@ -105,3 +105,12 @@ venv.bak/
 
 # vscode
 .vscode/
+
+# scrapy tmp dirs
+*scrapy_job_dir*/
+
+# all json, xml, txt files
+# NB check once in a while that it does not cause any problems
+*.json
+*.xml
+*.txt
