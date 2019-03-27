@@ -66,11 +66,17 @@ def main():
         urls.append(item["url"])
 
     # extract a site name from the first url
-    site = re.search(pattern="\w+\.kz", string=urls[0]).group(0)
+    site = re.search(pattern=".+\.kz", string=urls[0]).group(0)
+    site = site.replace("https://", "")
+    site = site.replace("http://", "")
 
     # generate url lists in 2 languages
     # save each list into its own file: <site>_urls_kz.txt, <site>_urls_ru.txt, or
     # <site>_urls_en.txt
+    if "/" in lang_from:
+        lang_from = lang_from.replace("/", "")
+    if "/" in lang_to:
+        lang_to = lang_to.replace("/", "")
     gen_list_and_file(url_list=urls, file_name=site + "_urls_" + lang_from + ".txt")
     gen_list_and_file(
         url_list=urls,
