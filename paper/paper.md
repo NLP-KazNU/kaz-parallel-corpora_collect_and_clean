@@ -53,7 +53,22 @@ The techniques and scripts are describe in following sections. The code and corp
 
 ### 2.1 Source of quality parallel texts
 
+The problem with quality parallel texts was described above in section 1. In the Republic of Kazakhstan there are some opportunities to partly solve the problem. For several years now the government has been actively promoting a policy of trilingualism ...(поискать какую-нибудь ссылку)... . All government bodies are expected to publish their materials in three languages: Kazakh, Russian, and English. Judging by the quality of translations it seems like they also have been recruiting people who either studied or lived abroad. Every government web-site has a news section that updates regularly. And as te news from government web-sites are published for wide distribution crawling them for computer linguistic purposes should not cause any copyright problems.
+
+In our work we have used following web-sites:
+- ...(привести список сайтов с официальными названиями)...
+
+...(привести статистику новостей по сайтам)...
+
 ### 2.2 Crawling of parallel texts
+
+When crawling web pages with news we need to keep in mind that we should not download all publications in one language separately from publications in the second language. If we do that, we will end up with two large sets of texts of different size without obvious relations between them. We would not be able to find which sentence groups on one side correspond to which sentence groups on the other side. That might cause problems with alignment later. To avoid such problems we downloaded texts in pairs - news item in one language and its translation into the other language. On most sites pages contain direct link to the same content in the other language. If for some reason there was just a link to a main page in the other language, without direct link to the particular publication we used approach with downloading all materials in different languages separately.
+
+For crawling parallel text we have tried using several python libraries: Scrapy ...[привести ссылку]..., Beautiful Soup ...[привести ссылку]..., Requests-HTML. All of them are up to the task. By default Scrapy works asynchronously, and that makes it difficult to fetch pairs of pages as order of requests is not obvious at once. Beautiful Soup and Requests-HTML allow more low-level control over request order. for crawling of parallel texts we used Requests-HTML. Each publication was saved into is own xml-file with structure shown in figure ... Pairs of publications that are translations of each other are named in similar manner using integer id's.
+
+figure ... - Structure of xml-file with downloaded content
+
+From each news item we collected news title, date published, subject section (if it was present), and news text. Titles are usually translated exactly, and that gives a certain number of already aligned sentences. The texts unfortunately have to be processed further.
 
 ### 2.3 Cleaning of crawled texts
 
