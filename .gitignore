@@ -114,3 +114,6 @@ venv.bak/
 *.json
 *.xml
 *.txt
+
+# .history from vscode extension
+.history/
