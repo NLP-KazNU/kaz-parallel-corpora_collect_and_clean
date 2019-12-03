@@ -1,3 +1,12 @@
+параллельный двуязычный казахско-английский корпус собранный с текстов новостных разделов сайтов государственных органов
+
+subject domain - news sections of government bodies websites
+
+новостных разделов сайтов государственных органов
+
+Kazakh-English KazNU Corpus (KEKC)
+
+
 # Технология создания открытого казахско-английского параллельного корпуса
 # Technology to create open Kazakh-English parallel corpus
 # Technology for creation of open Kazakh-English parallel corpus
