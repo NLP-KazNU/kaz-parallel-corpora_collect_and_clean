@@ -117,3 +117,5 @@ venv.bak/
 
 # .history from vscode extension
 .history/
+_.venv/
+crawl/
