@@ -8,6 +8,8 @@
 
 # for any other symbol it asks a user for a decision
 
+# TODO добавить '
+
 # docstring for docopt
 """clean_text.py
 
@@ -46,7 +48,7 @@ ZERO_WIDTH_CHARS = "\u2060\u2061\u2062\u2063\u180E\u200B\u200C\u200D\uFEFF\u00AD
 HYPHENS = "‐−‒⁃–—―‑"
 
 # quotation marks without "
-QUOTATION_MARKS = "«»„“”‘’„”‟❝❞⹂〝〞〟＂"
+QUOTATION_MARKS = "«»„“”„”‟❝❞⹂〝〞〟＂"
 
 # unwanted symbols found during cleaning.
 # added after first confirmation
@@ -322,8 +324,8 @@ if __name__ == "__main__":
     cleaned_text = clean_empty_lines(cleaned_text)
     cleaned_text = clean_quotation_marks(cleaned_text)
     cleaned_text = clean_hyphens(cleaned_text)
-    cleaned_text = clean_chars_interactively(cleaned_text)
-    cleaned_text = clean_spaces(input_text)
+    # cleaned_text = clean_chars_interactively(cleaned_text)
+    cleaned_text = clean_spaces(cleaned_text)
 
     # TODO: combine 2 following parts with print(..., end='\n', file="...")
 

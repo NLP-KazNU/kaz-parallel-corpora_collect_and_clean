@@ -152,7 +152,7 @@ if __name__ == "__main__":
     with open(file_name, "r") as in_file:
         for line in in_file:
             if count_dots(line) > 1:
-                result1.extend(re.split(pattern=r"(?<=\w{5}\.) ", string=line))
+                result1.extend(re.split(pattern=r"(?<=\S{5}\.) ", string=line))
             else:
                 result1.append(line)
 

@@ -2,24 +2,23 @@
 
 kaz-eng, kaz-rus
 
-http://akorda.kz/
-+https://primeminister.kz/
-https://mks.gov.kz/ (неудобная структура url)
-http://www.minfin.gov.kz/ (неудобная структура url)
-+http://mfa.gov.kz/
-http://www.adilet.gov.kz/ (защита от пауков?)
-http://economy.gov.kz/
-http://en.energo.gov.kz/
-http://mic.gov.kz/
-https://qogam.gov.kz/
-http://mdai.gov.kz/
-https://www.enbek.gov.kz/
-http://egov.kz/
-http://atameken.kz/
-https://strategy2050.kz/
-https://www.kaztag.kz/
-https://www.almaty.gov.kz/
-http://presidentfoundation.kz/
++http://akorda.kz/ - 35402 + 5259
++https://primeminister.kz/ - 6331 + 349
++http://mfa.gov.kz/ - 9154 + 741
++http://economy.gov.kz/ - 6137 + 413
+https://strategy2050.kz/ (1467) осталось ~ 700 новостей с изменённой системой url (посмотреть потом)
+http://atameken.kz/ (343)
+https://www.enbek.gov.kz/ (176)
+https://www.almaty.gov.kz/ (67)
+http://presidentfoundation.kz/ (51)
+http://en.energo.gov.kz/ (45)
+http://egov.kz/ (25)
+https://qogam.gov.kz/ (18)
+http://mdai.gov.kz/ (3)
+http://www.adilet.gov.kz/ (переписать со sleep и чем-нибудь ещё)
+https://www.kaztag.kz/ (26)(неудобная структура url, собрать все тексты и выровнять в конце)
+https://mks.gov.kz/ (неудобная структура url, собрать все тексты и выровнять в конце)
+http://www.minfin.gov.kz/ (неудобная структура url, собрать все тексты и выровнять в конце)
 
 ==========
 
@@ -31,6 +30,6 @@ https://www.mod.gov.kz/
 http://mvd.gov.kz/
 http://dsm.gov.kz/
 http://miid.gov.kz/
-www.emer.gov.kz 
+www.emer.gov.kz
 http://www.nurotan.kz/
 http://astana.gov.kz/

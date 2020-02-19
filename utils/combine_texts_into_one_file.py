@@ -3,10 +3,10 @@
 from os import listdir
 from os.path import isfile, join
 
-txt_dir = "/media/zhake/Data/Projects/kaz-parallel-corpora/akorda_kz/xml/texts/"
+TXT_DIR = "/media/zhake/data/Projects/kaz-parallel-corpora/crawl/strategy2050_kz/xmls/05-10/texts/"
 
 # get file names
-txt_files = [f for f in listdir(txt_dir) if isfile(join(txt_dir, f))]
+txt_files = [f for f in listdir(TXT_DIR) if isfile(join(TXT_DIR, f))]
 txt_files.sort()
 
 eng_txt_files = []
@@ -27,23 +27,23 @@ for i in range(len(eng_txt_files)):
     kaz_text.append("***** " + kaz_txt_files[i] + " *****")
     kaz_text.append("\n")
 
-    with open(file=join(txt_dir, eng_txt_files[i]), mode="r") as f:
+    with open(file=join(TXT_DIR, eng_txt_files[i]), mode="r") as f:
         for line in f:
             eng_text.append(line)
-    with open(file=join(txt_dir, kaz_txt_files[i]), mode="r") as f:
+    with open(file=join(TXT_DIR, kaz_txt_files[i]), mode="r") as f:
         for line in f:
             kaz_text.append(line)
 
     eng_text.append("\n")
     kaz_text.append("\n")
 
-with open(file=join(txt_dir, "eng_all_text.txt"), mode="w") as f:
+with open(file=join(TXT_DIR, "eng_all_text.txt"), mode="w") as f:
     for line in eng_text:
         if line[-1] == "\n":
             f.write(line)
         else:
             f.write(line + "\n")
-with open(file=join(txt_dir, "kaz_all_text.txt"), mode="w") as f:
+with open(file=join(TXT_DIR, "kaz_all_text.txt"), mode="w") as f:
     for line in kaz_text:
         if line[-1] == "\n":
             f.write(line)

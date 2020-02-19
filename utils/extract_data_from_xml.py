@@ -5,23 +5,23 @@ import os
 from os.path import isfile, join
 from xml.dom import minidom
 
-xml_dir = "/media/zhake/Data/Projects/kaz-parallel-corpora/akorda_kz/xml/"
+XML_DIR = "/media/zhake/data/Projects/kaz-parallel-corpora/crawl/strategy2050_kz/xmls/05-10/"
 
 
 def save_text_in_file(text: str, file_name: str) -> None:
     """TODO"""
     file_name = file_name.replace("xml", "txt")
-    global xml_dir
+    global XML_DIR
 
-    if not os.path.exists(join(xml_dir, "texts")):
-        os.makedirs(join(xml_dir, "texts"))
+    if not os.path.exists(join(XML_DIR, "texts")):
+        os.makedirs(join(XML_DIR, "texts"))
 
-    with open(file=join(xml_dir, "texts", file_name), mode="w") as f:
+    with open(file=join(XML_DIR, "texts", file_name), mode="w") as f:
         f.write(text)
 
 
 # get file names
-xml_files = [f for f in listdir(xml_dir) if isfile(join(xml_dir, f))]
+xml_files = [f for f in listdir(XML_DIR) if isfile(join(XML_DIR, f))]
 xml_files.sort()
 
 eng_xml_files = []
@@ -38,10 +38,10 @@ kaz_titles = []
 
 for i in range(len(eng_xml_files)):
     # open a file
-    eng_xml_data = minidom.parse(join(xml_dir, eng_xml_files[i]))
+    eng_xml_data = minidom.parse(join(XML_DIR, eng_xml_files[i]))
     eng_xml_data.normalize()
 
-    kaz_xml_data = minidom.parse(join(xml_dir, kaz_xml_files[i]))
+    kaz_xml_data = minidom.parse(join(XML_DIR, kaz_xml_files[i]))
     kaz_xml_data.normalize()
     # extract titles
     if len(eng_xml_data.getElementsByTagName("title")[0].childNodes) == 0:

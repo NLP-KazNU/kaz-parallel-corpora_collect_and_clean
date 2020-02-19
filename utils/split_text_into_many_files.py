@@ -2,9 +2,9 @@
 
 from os import makedirs
 
-# FILE_NAME = "/media/zhake/Data/Projects/kaz-parallel-corpora/akorda_kz/xml/texts/eng_all_text_cleaned_output.split.tok.lower.txt"
-FILE_NAME = "/media/zhake/Data/Projects/kaz-parallel-corpora/akorda_kz/xml/texts/kaz_all_text_cleaned_output.split.tok.lower.txt"
-PROCESSED_FILES_DIR = "/media/zhake/Data/Projects/kaz-parallel-corpora/akorda_kz/xml/texts/processed_texts/"
+# FILE_NAME = "/media/zhake/Data/Projects/kaz-parallel-corpora/crawl/strategy2050_kz/xmls/00-05/texts/eng_cleaned_split_norm_tok_lower.txt"
+FILE_NAME = "/media/zhake/Data/Projects/kaz-parallel-corpora/crawl/strategy2050_kz/xmls/00-05/texts/kaz_cleaned_split_norm_tok_lower.txt"
+PROCESSED_FILES_DIR = "/media/zhake/Data/Projects/kaz-parallel-corpora/crawl/strategy2050_kz/xmls/00-05/texts/processed_texts/"
 
 makedirs(name=PROCESSED_FILES_DIR, exist_ok=True)
 

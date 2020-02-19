@@ -5,12 +5,12 @@
 import glob
 import subprocess
 
-FILES_DIR = "/media/zhake/Data/Projects/kaz-parallel-corpora/akorda_kz/xml/texts/processed_texts/"
+FILES_DIR = "/media/zhake/Data/Projects/kaz-parallel-corpora/crawl/strategy2050_kz/xmls/00-05/texts/processed_texts/"
 HUNALIGN_PATH = "/media/zhake/Data/Projects/kaz-parallel-corpora/utils/hunalign"
 HUNALIGN_DICTIONARY_FILE_PATH = (
-    "/media/zhake/Data/Projects/kaz-parallel-corpora/utils/akorda.dic"
+    "/media/zhake/Data/Projects/kaz-parallel-corpora/utils/en_kz.dic"
 )
-RESULT_FILE_PATH = "/tmp/align.txt"
+RESULT_FILE_PATH = "/tmp/strategy2050_kz_corpus.tsv"
 
 # read all file names from a DIR
 # create lists of kaz and eng files

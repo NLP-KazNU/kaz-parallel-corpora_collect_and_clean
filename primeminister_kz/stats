@@ -1,9 +1,0 @@
-ru - 1628
-kz - 1441
-en - 1130
-
-url - response.url
-section - response.css('div.navi a::text').getall()[-1]
-title - response.css('h1.main-news-item__head::text').getall()
-date/time - response.css('div.date::text').getall()[0]
-text - response.css('p::text').getall()
