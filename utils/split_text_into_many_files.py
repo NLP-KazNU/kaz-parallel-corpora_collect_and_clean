@@ -2,9 +2,8 @@
 
 from os import makedirs
 
-# FILE_NAME = "/media/zhake/Data/Projects/kaz-parallel-corpora/crawl/strategy2050_kz/xmls/00-05/texts/eng_cleaned_split_norm_tok_lower.txt"
-FILE_NAME = "/media/zhake/Data/Projects/kaz-parallel-corpora/crawl/strategy2050_kz/xmls/00-05/texts/kaz_cleaned_split_norm_tok_lower.txt"
-PROCESSED_FILES_DIR = "/media/zhake/Data/Projects/kaz-parallel-corpora/crawl/strategy2050_kz/xmls/00-05/texts/processed_texts/"
+FILE_NAME = "/media/zhake/data/Projects/kaz-parallel-corpora/crawl/strategy2050_kz/xmls/30-35/texts/kaz_all_text_clean_split_tok_lower.txt"
+PROCESSED_FILES_DIR = "/media/zhake/data/Projects/kaz-parallel-corpora/crawl/strategy2050_kz/xmls/30-35/texts/processed_texts/"
 
 makedirs(name=PROCESSED_FILES_DIR, exist_ok=True)
 
@@ -21,7 +20,9 @@ with open(file=FILE_NAME, mode="r") as file:
             # close previous file
             new_file.close()
             # find file name in line
-            tmp_f = line[line.find("* * * * * ") + 10 : line.rfind(" * * * * *")]
+            tmp_f = line[
+                line.find("* * * * * ") + 10 : line.rfind(" * * * * *")
+            ]
             # create new file name and open it
             new_file_name = PROCESSED_FILES_DIR + tmp_f
             new_file = open(file=new_file_name, mode="w")

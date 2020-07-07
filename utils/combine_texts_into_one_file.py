@@ -3,7 +3,7 @@
 from os import listdir
 from os.path import isfile, join
 
-TXT_DIR = "/media/zhake/data/Projects/kaz-parallel-corpora/crawl/strategy2050_kz/xmls/05-10/texts/"
+TXT_DIR = "/media/zhake/data/Projects/kaz-parallel-corpora/crawl/strategy2050_kz/xmls/30-35/texts/"
 
 # get file names
 txt_files = [f for f in listdir(TXT_DIR) if isfile(join(TXT_DIR, f))]

@@ -5,7 +5,7 @@ import os
 from os.path import isfile, join
 from xml.dom import minidom
 
-XML_DIR = "/media/zhake/data/Projects/kaz-parallel-corpora/crawl/strategy2050_kz/xmls/05-10/"
+XML_DIR = "/media/zhake/data/Projects/kaz-parallel-corpora/crawl/strategy2050_kz/xmls/30-35/"
 
 
 def save_text_in_file(text: str, file_name: str) -> None:
@@ -47,12 +47,20 @@ for i in range(len(eng_xml_files)):
     if len(eng_xml_data.getElementsByTagName("title")[0].childNodes) == 0:
         eng_title = ""
     else:
-        eng_title = eng_xml_data.getElementsByTagName("title")[0].childNodes[0].nodeValue
+        eng_title = (
+            eng_xml_data.getElementsByTagName("title")[0]
+            .childNodes[0]
+            .nodeValue
+        )
 
     if len(kaz_xml_data.getElementsByTagName("title")[0].childNodes) == 0:
         kaz_title = ""
     else:
-        kaz_title = kaz_xml_data.getElementsByTagName("title")[0].childNodes[0].nodeValue
+        kaz_title = (
+            kaz_xml_data.getElementsByTagName("title")[0]
+            .childNodes[0]
+            .nodeValue
+        )
 
     if (eng_title != "") and (kaz_title != ""):
         eng_titles.append(eng_title)
@@ -62,12 +70,16 @@ for i in range(len(eng_xml_files)):
     if len(eng_xml_data.getElementsByTagName("text")[0].childNodes) == 0:
         eng_text = ""
     else:
-        eng_text = eng_xml_data.getElementsByTagName("text")[0].childNodes[0].nodeValue
+        eng_text = (
+            eng_xml_data.getElementsByTagName("text")[0].childNodes[0].nodeValue
+        )
 
     if len(kaz_xml_data.getElementsByTagName("text")[0].childNodes) == 0:
         kaz_text = ""
     else:
-        kaz_text = kaz_xml_data.getElementsByTagName("text")[0].childNodes[0].nodeValue
+        kaz_text = (
+            kaz_xml_data.getElementsByTagName("text")[0].childNodes[0].nodeValue
+        )
 
     # save texts into separate file pairs
     if (eng_text != "") and (kaz_text != ""):

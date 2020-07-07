@@ -5,12 +5,12 @@
 import glob
 import subprocess
 
-FILES_DIR = "/media/zhake/Data/Projects/kaz-parallel-corpora/crawl/strategy2050_kz/xmls/00-05/texts/processed_texts/"
-HUNALIGN_PATH = "/media/zhake/Data/Projects/kaz-parallel-corpora/utils/hunalign"
+FILES_DIR = "/media/zhake/data/Projects/kaz-parallel-corpora/crawl/strategy2050_kz/xmls/30-35/texts/processed_texts/"
+HUNALIGN_PATH = "/media/zhake/data/Projects/kaz-parallel-corpora/utils/hunalign"
 HUNALIGN_DICTIONARY_FILE_PATH = (
-    "/media/zhake/Data/Projects/kaz-parallel-corpora/utils/en_kz.dic"
+    "/media/zhake/data/Projects/kaz-parallel-corpora/utils/en_kz.dic"
 )
-RESULT_FILE_PATH = "/tmp/strategy2050_kz_corpus.tsv"
+RESULT_FILE_PATH = "/tmp/strategy2050_kz_corpus_7.tsv"
 
 # read all file names from a DIR
 # create lists of kaz and eng files
@@ -42,7 +42,9 @@ for i in range(len(kaz_files)):
         kaz_files[i][(kaz_files[i].rfind("/") + 1) : kaz_files[i].rfind("-")]
         != eng_files[i][(eng_files[i].rfind("/") + 1) : eng_files[i].rfind("-")]
     ):
-        raise Exception(f"Filenames {kaz_files[i]} and {eng_files[i]} do not match.")
+        raise Exception(
+            f"Filenames {kaz_files[i]} and {eng_files[i]} do not match."
+        )
 
 # align each file pair, saving result in one file (may be separate files?)
 for i in range(len(kaz_files)):

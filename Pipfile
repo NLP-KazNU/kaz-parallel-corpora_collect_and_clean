@@ -6,6 +6,7 @@ verify_ssl = true
 [dev-packages]
 black = "*"
 flake8 = "*"
+mypy = "*"
 
 [packages]
 lxml = "*"
@@ -18,9 +19,13 @@ scrapy = "*"
 docopt = "*"
 sacremoses = "*"
 requests-html = "*"
+jupyter = "*"
+numpy = "*"
+matplotlib = "*"
+scikit-learn = "*"
 
 [requires]
-python_version = "3.6"
+python_version = "3.8"
 
 [pipenv]
 allow_prereleases = true
