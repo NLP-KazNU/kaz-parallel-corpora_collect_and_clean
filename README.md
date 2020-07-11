@@ -1,36 +1,21 @@
 # kaz-parallel-corpora
 
-## Заметки
+Parallel Kazakh-English corpus collected from news sections of government websites.
 
-Variable needed for json-encoding to be utf-8
-```shell
-FEED_EXPORT_ENCODING='utf-8'
-```
+# Corpus size
 
-"Сonventional" way to run crawling. Used when there is a crawling project.
-```shell
-scrapy crawl quotes -o quotes.json
-```
+ # | Web-site | Number of sentence pairs
+-- | -- | --
+1 | http://www.akorda.kz/ | 35&nbsp;368
+2 | https://primeminister.kz/ | 6&nbsp;323
+3 | http://www.mfa.gov.kz/ | 9&nbsp;152
+4 | http://economy.gov.kz/ | 6&nbsp;123
+5 | https://strategy2050.kz/ | 203&nbsp;665
+6 | News titles | 41&nbsp;899
+ | Total: | 302&nbsp;530
 
-Способ запускать краулинг, имея файла с описанием "паука", без создания проекта краулинга.
-```shell
-scrapy runspider <spider_file.py> -o <output.json>
-```
+# Content of the repository
 
-```shell
-FEED_EXPORT_ENCODING='utf-8' scrapy runspider primeminister_kz_news_urls_ru_spider.py -o primeminister_kz_news_urls_ru.json
-```
-
-## Последовательность действий по сбору параллельного корпуса
-
-1. Собрать url-ы страниц на языке, на котором опубликовано больше всего новостей (чаще всего, это русский язык).
-```
-FEED_EXPORT_ENCODING='utf-8' scrapy runspider <spider_file.py> -o <output_file.json>
-```
-2. Из файла с url-ами сгенерировать списки урлов с новостями на 3 языках.
-TODO: Написать скрипт: ввод - файл с предыдущего шага; вывод - 3 текстовых файла.
-
-## TODO:
-- описать процесс "установки" проекта, начиная с pipenv
-- xmllint
-- сделать предупреждение о времени запуска и интерсивности сбора
+**compare/** - code to compare the corpus with other parallel corpora
+**corpus/** - corpus files in *.tsv
+**utils/** - scripts used for crawling and cleaning the corpus
