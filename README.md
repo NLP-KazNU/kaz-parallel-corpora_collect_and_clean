@@ -9,7 +9,14 @@ Developed bilingual tools for crawling and cleaning the corpus are following:
 6) Hunalign adapted for Kazakh-English language pair;
 7) Morphological segmentation tools;
 
-What you need to work with developed tools:
+
+# Content of the repository
+
+- **compare/** - code to compare the corpus with other parallel corpora
+- **corpus/** - corpus files in *.tsv
+- **utils/** - scripts used for crawling and cleaning the corpus
+
+# What it needed
 ●	Python3(version 3.6 or later)
 
 ●	lxml
@@ -22,7 +29,7 @@ What you need to work with developed tools:
 
 ●	matplotlib
 
-
+# How it works
 utils/ directory consist of developed bilingual tools for crawling and cleaning the Kazakh-English(vise versa) parallel corpora. It consist following files:
 ●	_clean_text_in_files.sh
 ●	_gen_langs_lists.py
@@ -71,8 +78,3 @@ Parallel Kazakh-English corpus collected from news sections of government websit
 | 6 | News titles               |  41&nbsp;899
 |   | **Total:**                | **302&nbsp;530**
 
-# Content of the repository
-
-- **compare/** - code to compare the corpus with other parallel corpora
-- **corpus/** - corpus files in *.tsv
-- **utils/** - scripts used for crawling and cleaning the corpus
