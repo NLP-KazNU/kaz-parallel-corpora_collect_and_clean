@@ -32,19 +32,33 @@ Developed bilingual tools for crawling and cleaning the corpus are following:
 # How it works
 utils/ directory consist of developed bilingual tools for crawling and cleaning the Kazakh-English(vise versa) parallel corpora. It consist following files:
 ●	_clean_text_in_files.sh
+
 ●	_gen_langs_lists.py
+
 ●	_join_similar_urls.py
+
 ●	align_files.py
+
 ●	clean_alphabets.py
+
 ●	clean_text.py
+
 ●	combine_texts_into_one_file.py
+
 ●	en_kz.dic
+
 ●	extract_data_from_xml.py
+
 ●	sacre_norm_tok.py
+
 ●	segment.py
+
 ●	split_direct_speech.py
+
 ●	split_sentences_eng.py
+
 ●	split_sentences_kaz.py
+
 ●	split_text_into_many_files.py
 
 The sequence of steps for launching files is as follows:
