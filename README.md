@@ -11,10 +11,15 @@ Developed bilingual tools for crawling and cleaning the corpus are following:
 
 What you need to work with developed tools:
 ●	Python3(version 3.6 or later)
+
 ●	lxml
+
 ●	sacremoses
+
 ●	jupyter 
+
 ●	numpy
+
 ●	matplotlib
 
 
