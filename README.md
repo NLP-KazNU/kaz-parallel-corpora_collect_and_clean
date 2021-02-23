@@ -1,4 +1,5 @@
 # kaz-parallel-corpora
+Zhandos Zhumanov, Ualsher Tukeyev, Aidana Karibayeva
 
 Developed bilingual tools for crawling and cleaning the corpus are following:
 1) URL collection tool;
