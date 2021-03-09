@@ -1,5 +1,7 @@
 # kaz-parallel-corpora
 
+The products have to use on base of Creative Commons licences, exactly, CC BY-SA (CC Attribution-Share Alike)
+
 Developed bilingual tools for crawling and cleaning the corpus are following:
 1) URL collection tool;
 2) News crawling tools;
